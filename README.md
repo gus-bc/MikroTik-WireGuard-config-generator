@@ -1,2 +1,4 @@
-# Wiregaurd
- Microtic Wiregaurd key generator 
+# WireGuard
+ MikroTik WireGuard config file generator 
+
+

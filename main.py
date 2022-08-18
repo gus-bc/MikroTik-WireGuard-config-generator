@@ -34,7 +34,7 @@ def main():
                     f"DNS = {dns}" \
                     f"\n\n[Peer]\n" + peer
         os.system(f'echo "{conf_file}" > {str_ip}.conf')
-        firewall_add += 'add allowed-address={}/32 interface=wireguard1 public-key="{}" preshared-key="{}" \n'.format(str_ip, pub_key[:-1], data["preshared-key"])
+        firewall_add += 'add allowed-address={}/32 interface={} public-key="{}" preshared-key="{}" \n'.format(str_ip, data['config']["interface"], pub_key[:-1], data['config']["preshared-key"])
 
     print(firewall_add)
     os.system('touch Firewall_command.txt')

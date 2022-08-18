@@ -1,9 +1,13 @@
 {
 	"config": {
-		"start_ip": "",
-		"end_ip": "",
-		"peer": "PublicKey= \nPresharedKey= \nAllowedIPs= \nEndpoint= \nPersistentKeepalive= ",
-		"DNS": "",
-		"preshared-key": ""
+		"start_ip": "0.0.0.0",
+		"end_ip": "0.0.0.255",
+		"peer": "PublicKey=Pubkey_test \nPresharedKey=Preshared-Key_test \nAllowedIPs=222.222.222.222/32 \nEndpoint=Endpoint_test",
+		"DNS": "111.111.111.111",
+		"preshared-key": "preshared-Key_test",
+		"interface": "Interface_test"
 	}
 }
+
+
+
