@@ -33,8 +33,14 @@ def main():
                     f"Address = {str_ip}\n" \
                     f"DNS = {dns}" \
                     f"\n\n[Peer]\n" + peer
+        if data['config']["preshared-key"]:
+            conf_file += f"\nPresharedKey={data['config']['preshared-key']}"
+
         os.system(f'echo "{conf_file}" > {str_ip}.conf')
-        firewall_add += 'add allowed-address={}/32 interface={} public-key="{}" preshared-key="{}" \n'.format(str_ip, data['config']["interface"], pub_key[:-1], data['config']["preshared-key"])
+        firewall_add += 'add allowed-address={}/32 interface={} public-key="{}" \n'.format(str_ip, data['config']["interface"], pub_key[:-1])
+        if data['config']["preshared-key"]:
+            firewall_add = firewall_add[:-1] + 'preshared-key="{}"\n'.format(data['config']["preshared-key"])
+
 
     print(firewall_add)
     os.system('touch Firewall_command.txt')
