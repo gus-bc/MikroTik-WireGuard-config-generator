@@ -1,8 +1,14 @@
 # MikroTik WireGuard config-generator
  Creates config files for devises and command to add the configs for MikroTik Command Line Interface 
 
-## Install
- Download the main file
+## How to run:
+ Download the main file and run main.py with python3. No packages required.
 
 ## How to use: 
+ Fil in a config file in the format shown in the exampel. 
+ 
+ Pre-shared key is optional, if not used leave it blank or set it to False.
 
+ To add peer settings "\nExampel=True".  "\n" is necessary.
+ 
+ 
