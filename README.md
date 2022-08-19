@@ -3,6 +3,8 @@
 
 ## How to run:
  Download the main file and run main.py with python3. No packages required.
+ 
+ A folder with the configs and the command will be created in the working direktory.
 
 ## How to use: 
  Fil in a config file in the format shown in the exampel. 
